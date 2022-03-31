@@ -14,10 +14,36 @@ body {
   background-color: #fefae0;
 }
 
-header {
+nav {
   background-color: #606c38;
   padding: 1em;
   margin-bottom: 2em;
+  height: 40px;
+}
+
+nav ul li:first-of-type {
+  float: left;
+}
+
+nav ul li {
+  float: right;
+}
+
+a svg:hover .my-list {
+  fill: #bc6c25;
+  stroke: #0e0e0e;
+  stroke-width: 4;
+}
+a svg:hover .bag {
+  fill: #bc6c25;
+  stroke: #0e0e0e;
+  stroke-width: 4;
+}
+a svg .bag,
+a svg .my-list {
+  transition-timing-function: ease-in-out;
+  transition: 200ms;
+  -webkit-transition-timing-function: ease-in-out;
 }
 
 mark {
@@ -36,54 +62,142 @@ h2 {
   font-family: "pilowlava", sans-serif;
 }
 
-p {
+h3 {
   font-family: "pilowlava", sans-serif;
-  font-size: 1.8em;
+  /* margin-bottom: 1em; */
+  margin-top: 1em;
 }
+
+.shirt {
+  margin-left: 3em;
+}
+
 section div:nth-of-type(2) {
   justify-content: center;
-  display: flex;
+  display: block;
   align-items: center;
   margin-top: 2em;
 }
 
 ul {
-  display: flex;
   list-style: none;
-  justify-content: space-between;
+}
+
+ul:nth-of-type(3n - 1) {
+  float: right;
 }
 
 fieldset {
   border: none;
 }
 
-section div:first-of-type {
+main form section:first-of-type div {
   background-color: white;
   width: 28em;
   margin: 0 auto;
+  margin-left: 1em;
   box-shadow: 0px 0px 21px 8px #224c3250;
   border: #bc6c25;
   border-radius: 15% 85% 54% 46% / 64% 25% 75% 36%;
-  display: flex;
+  margin-bottom: 2em;
 }
 
-section div:first-of-type svg {
-  margin-left: 3.5em;
+main form section:last-of-type div {
+  justify-content: space-evenly;
+  width: 250px;
+  margin: 0 auto;
+  margin-bottom: 1em;
+  background-color: #606c38;
+  border-radius: 48% 52% 90% 10% / 42% 54% 46% 58%;
+  box-shadow: 0px 0px 21px 8px #224c3250;
+  padding: 1.5em;
+  color: #fefae0;
 }
 
-svg :nth-of-type() a svg:hover #my-list {
-  fill: #bc6c25;
-  stroke: #0e0e0e;
-  stroke-width: 4;
+/* Form section */
+.list {
+  margin-left: 1em;
 }
-a svg:hover .bag {
-  fill: #bc6c25;
-  stroke: #0e0e0e;
-  stroke-width: 4;
+
+legend {
+  display: none;
 }
-a svg .bag,
-a svg #my-list {
-  transition-timing-function: ease-in-out;
-  transition: 200ms;
-  -webkit-transition-timing-function: ease-in-out;
+
+form section:first-of-type {
+  float: left;
+}
+
+form section:last-of-type {
+  float: right;
+}
+
+input[type="radio"] {
+  position: absolute;
+  left: -1000px;
+}
+
+/* Colors for the radiobuttons */
+
+label {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  color: white;
+  font-size: 1px;
+  border: 2px solid #0e0e0e;
+  border-radius: 73% 27% 83% 17% / 49% 72% 28% 51%;
+  box-shadow: 2px 2px 1px #00000050;
+  cursor: pointer;
+  margin-left: 1em;
+  opacity: 70%;
+}
+
+label:hover {
+  transform: scale(1.1);
+  transition: 200ms ease-in-out;
+  opacity: 100%;
+}
+
+label:active {
+  /* display: block; */
+  opacity: 100%;
+  transform: scale(1.1);
+}
+
+/* Main colors */
+
+label:first-of-type {
+  background-color: #606c38;
+  color: #606c38;
+}
+label:nth-of-type(2) {
+  background-color: #782b25;
+  color: #782b25;
+}
+label:nth-of-type(3) {
+  background-color: #262e52;
+  color: #262e52;
+}
+label:nth-of-type(4) {
+  background-color: #ef820d;
+  color: #ef820d;
+}
+label:nth-of-type(5) {
+  background-color: #f5e7d3;
+  color: #f5e7d3;
+}
+
+/* Collar colors */
+label:nth-of-type(6) {
+  background-color: #0e0e0e;
+  color: #0e0e0e;
+}
+label:nth-of-type(7) {
+  background-color: white;
+  color: white;
+}
+label:nth-of-type(8) {
+  background-color: #286135;
+  color: #286135;
 }

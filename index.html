@@ -53,7 +53,7 @@
               </svg>
             </a>
           </li>
-          <li>
+          <li class="list">
             <a href="mylist.html"
               ><svg
                 width="35"
@@ -65,7 +65,7 @@
                 <path
                   d="M60.6027 225.515C46.0145 209.243 77.2747 40.264 60.6027 60.7084C43.9306 81.1529 31.0098 94.087 31.0098 94.087C31.0098 94.087 22.674 72.391 9.33611 75.7288C-4.00176 79.0667 2.66729 60.7084 2.66729 60.7084C2.66729 60.7084 28.9413 7.90051 60.6027 1.87863C70.9969 -0.0982934 87.6948 1.87863 87.6948 1.87863C87.6948 1.87863 110.159 37.5513 132.292 36.9262C153.667 36.3225 174.389 1.87863 174.389 1.87863C174.389 1.87863 188.989 0.390723 198.147 1.87863C230.758 7.17692 259 60.7084 259 60.7084C259 60.7084 245.662 60.7084 245.246 85.3252C244.829 109.942 223.572 94.087 223.572 94.087C223.572 94.087 206.9 78.6495 198.147 60.7084C189.394 42.7674 217.32 205.905 198.147 225.515C178.974 245.125 75.1909 241.787 60.6027 225.515Z"
                   fill="#dda15e"
-                  id="my-list"
+                  class="my-list"
                 />
               </svg>
             </a>
@@ -101,9 +101,9 @@
       </nav>
     </header>
     <main>
+      <h1><mark>Customize YOUR T-shirt!</mark></h1>
       <form class="customize-section">
         <section>
-          <h1><mark>Customize YOUR T-shirt!</mark></h1>
           <div>
             <fieldset>
               <svg
@@ -142,35 +142,28 @@
             </fieldset>
           </div>
         </section>
-        <div>
-          <h2>T-shirt</h2>
-          <p>$30.-</p>
-        </div>
         <section>
+          <div>
+            <h2>T-shirt - $30,-</h2>
+          </div>
           <fieldset>
             <legend>Coustomize your t-shirt!</legend>
 
             <!-- Color -->
-            <h2>Main color:</h2>
+            <h3>Main color:</h3>
             <input
-              type="radio"
-              id="green"
-              name="color"
-              value="Green"
-              required
+            type="radio"
+            id="green"
+            name="color"
+            value="Green"
+            required
             />
             <label for="green">Green</label>
             <input type="radio" id="red" name="color" value="Red" required />
             <label for="red">Red</label>
             <input type="radio" id="blue" name="color" value="Blue" required />
             <label for="blue">Blue</label>
-            <input
-              type="radio"
-              id="orange"
-              name="color"
-              value="Orange"
-              required
-            />
+            <input type="radio"id="orange" name="color" value="Orange" required />
             <label for="orange">Orange</label>
             <input
               type="radio"
@@ -181,7 +174,7 @@
             />
             <label for="beige">Beige</label>
 
-            <h2>Collar color:</h2>
+            <h3>Collar color:</h2>
             <input
               type="radio"
               id="black"
@@ -208,7 +201,7 @@
             <label for="dark-green">Dark Green</label>
 
             <!-- Text area -->
-            <h2>Text:</h2>
+            <h3>Text:</h3>
             <input
               type="text"
               placeholder="Put customizable text for on the shirt here..."
@@ -217,7 +210,7 @@
             />
 
             <!-- Size -->
-            <h2>Size:</h2>
+            <h3>Size:</h3>
             <select id="size" name="sizes">
               <option value="XS">XS</option>
               <option value="S">S</option>
