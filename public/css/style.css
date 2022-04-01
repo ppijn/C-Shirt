@@ -1,0 +1,316 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "pilowlava";
+  src: url("./Pilowlava-RegularA9.woff") format("woff");
+  font-weight: 100;
+}
+
+body {
+  background-color: #fefae0;
+}
+
+nav {
+  background-color: #606c38;
+  padding: 1em;
+  margin-bottom: 2em;
+  height: 40px;
+}
+
+nav ul li:first-of-type {
+  float: left;
+}
+
+nav ul li {
+  float: right;
+}
+
+a svg:hover .my-list {
+  fill: #bc6c25;
+  stroke: #0e0e0e;
+  stroke-width: 4;
+}
+a svg:hover .bag {
+  fill: #bc6c25;
+  stroke: #0e0e0e;
+  stroke-width: 4;
+}
+a svg .bag,
+a svg .my-list {
+  transition-timing-function: ease-in-out;
+  transition: 200ms;
+  -webkit-transition-timing-function: ease-in-out;
+}
+
+mark {
+  background-color: #fefae0;
+}
+
+h1 {
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 1em;
+  font-family: "pilowlava", sans-serif;
+  /* color: #283618; */
+}
+
+h2 {
+  font-family: "pilowlava", sans-serif;
+}
+
+h3 {
+  font-family: "pilowlava", sans-serif;
+  /* margin-bottom: 1em; */
+  margin-top: 1em;
+}
+
+.shirt {
+  margin-left: 3em;
+}
+
+section div:nth-of-type(2) {
+  justify-content: center;
+  display: block;
+  align-items: center;
+  margin-top: 2em;
+}
+
+ul {
+  list-style: none;
+}
+
+ul:nth-of-type(3n - 1) {
+  float: right;
+}
+
+fieldset {
+  border: none;
+}
+
+main form section:first-of-type div {
+  background-color: white;
+  width: 28em;
+  margin: 0 auto;
+  margin-left: 1em;
+  box-shadow: 0px 0px 21px 8px #224c3250;
+  /* border: #bc6c25; */
+  border-radius: 15% 85% 54% 46% / 64% 25% 75% 36%;
+  margin-bottom: 2em;
+}
+
+main form section:last-of-type div {
+  justify-content: space-evenly;
+  width: 250px;
+  margin: 0 auto;
+  margin-bottom: 1em;
+  background-color: #606c38;
+  border-radius: 48% 52% 90% 10% / 42% 54% 46% 58%;
+  box-shadow: 0px 0px 21px 8px #224c3250;
+  padding: 1.5em;
+  color: #fefae0;
+}
+
+/* Form section */
+.list {
+  margin-left: 1em;
+}
+
+legend {
+  display: none;
+}
+
+form {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+form section:first-of-type {
+  float: left;
+}
+
+form section:last-of-type {
+  float: right;
+}
+
+input[type="radio"] {
+  position: absolute;
+
+  opacity: 0%;
+}
+
+/* Colors for the radiobuttons */
+
+label {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  color: white;
+  font-size: 1px;
+  border: 2px solid #0e0e0e;
+  border-radius: 73% 27% 83% 17% / 49% 72% 28% 51%;
+  box-shadow: 2px 2px 1px #00000050;
+  cursor: pointer;
+  margin-left: 1em;
+  opacity: 70%;
+}
+
+label:hover {
+  transform: scale(1.1);
+  transition: 200ms ease-in-out;
+  opacity: 100%;
+}
+
+input[type="radio"]:checked label {
+  position: absolute;
+  left: -1000px;
+}
+
+/* Main colors */
+#green:checked + label {
+  transform: scale(1.1);
+  opacity: 100%;
+}
+
+#red:checked + label {
+  transform: scale(1.1);
+  opacity: 100%;
+}
+#blue:checked + label {
+  transform: scale(1.1);
+  opacity: 100%;
+}
+#orange:checked + label {
+  transform: scale(1.1);
+  opacity: 100%;
+}
+#beige:checked + label {
+  transform: scale(1.1);
+  opacity: 100%;
+}
+
+label:first-of-type {
+  background-color: #606c38;
+  color: #606c38;
+}
+label:nth-of-type(2) {
+  background-color: #782b25;
+  color: #782b25;
+}
+label:nth-of-type(3) {
+  background-color: #262e52;
+  color: #262e52;
+}
+label:nth-of-type(4) {
+  background-color: #bc6c25;
+  color: #bc6c25;
+}
+label:nth-of-type(5) {
+  background-color: #f5e7d3;
+  color: #f5e7d3;
+}
+
+/* Collar colors */
+
+#black:checked + label {
+  transform: scale(1.1);
+  opacity: 100%;
+}
+#white:checked + label {
+  transform: scale(1.1);
+  opacity: 100%;
+}
+#dark-green:checked + label {
+  transform: scale(1.1);
+  opacity: 100%;
+}
+
+label:nth-of-type(6) {
+  background-color: #0e0e0e;
+  color: #0e0e0e;
+}
+label:nth-of-type(7) {
+  background-color: white;
+  color: white;
+}
+label:nth-of-type(8) {
+  background-color: #286135;
+  color: #286135;
+}
+
+/* text area */
+
+input[type="text"] {
+  height: 30px;
+  width: 250px;
+  padding: 0.5em;
+  border: 2px solid black;
+  border-radius: 9% 91% 7% 93% / 79% 24% 76% 21%;
+  font-size: 12px;
+  margin-top: 0.5em;
+  font-family: "Verdana", "Geneva", "Tahoma", sans-serif;
+}
+
+/* Size options */
+
+select {
+  height: 40px;
+  width: 60px;
+  border-radius: 40% 60% 17% 83% / 55% 16% 84% 45%;
+  border: 2px solid black;
+  font-size: 18px;
+  font-family: "pilowlava", sans-serif;
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+/* Create shirt button */
+
+input[type="submit"] {
+  /* position: absolute; */
+  cursor: pointer;
+  background-color: #dda15e;
+  display: block;
+  color: #bc6c25;
+  font-family: "pilowlava", sans-serif;
+  box-shadow: 2px 2px 10px #bc6c2560;
+  margin-left: 4.5em;
+  border: 2px solid black;
+  border: none;
+  font-size: 20px;
+  padding: 1em;
+  border-radius: 39% 61% 17% 83% / 75% 20% 80% 25%;
+}
+
+input[type="submit"]:hover {
+  color: #dda15e;
+  box-shadow: 2px 2px 10px #bc6c2580;
+  background-color: #bc6c25;
+  transition: 100ms ease-in-out;
+  transform: scale(1.1);
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  main form section:first-of-type div {
+    width: 20em;
+    height: 20em;
+    margin-left: 2em;
+  }
+
+  main form section div svg {
+    width: 200px;
+    height: 300px;
+    margin-left: 10%;
+  }
+
+  form section:last-of-type {
+    margin-right: 10%;
+  }
+}

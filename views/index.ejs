@@ -1,0 +1,127 @@
+<%- include( './partials/head' ) %>
+
+      <h1><mark>Customize YOUR T-shirt!</mark></h1>
+      <form class="customize-section" method="post" action="/">
+        <section>
+          <div>
+            <fieldset>
+              <svg
+                width="300"
+                height="400"
+                viewBox="0 0 693 764"
+                fill="none"
+                class="shirt"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M123 337C61 353.8 21 336.5 6.5 322.5L18.5 243.5C22 221.667 30.5 171.3 36.5 144.5C42.5 117.7 62 90.6667 71 80.5C92.6667 69 137.9 44.6 145.5 39C153.1 33.4 189 22.3333 206 17.5C220.5 36.5 268.012 61.1831 340 62.5C422 64 477 30.1667 489 17C512 27.8333 537.8 37.9 551 43.5C567.5 50.5 596.5 73 617.5 80.5C634.3 86.5 647.833 119.333 652.5 135L686 318.5C640.4 352.9 587 339.333 564 330.5M123 337L128.5 730.5C178.333 743.833 301.1 768.2 393.5 759C485.9 749.8 545.667 736.833 564 731.5V330.5M123 337V290M564 330.5V290"
+                  stroke="black"
+                  stroke-width="5"
+                  fill="#f5e7d3"
+                />
+                <path
+                  d="M350.555 62.7623C268.746 66.0905 218.765 33.6408 204 17L225.5 3.5C235.036 19.1667 273.398 48.9 350.555 42.5C427.711 36.1 458.667 13.8333 464.5 3.5L490 17C477.605 30.8674 432.363 59.4342 350.555 62.7623Z"
+                  stroke="black"
+                  stroke-width="4"
+                  fill="#345c2e"
+                />
+                <path
+                  d="M123 335C72.2 356.2 24.1667 335.167 6.5 322L2.5 338C35.7 371.6 96 367.5 123 359V335Z"
+                  stroke="black"
+                  stroke-width="4"
+                  fill="#345c2e"
+                />
+                <path
+                  d="M564 331.16C617.198 352.622 667.499 331.329 686 318L690 338.5C650 372.1 589.333 364.5 564 356.5V331.16Z"
+                  stroke="black"
+                  stroke-width="4"
+                  fill="#345c2e"
+                />
+              </svg>
+            </fieldset>
+          </div>
+        </section>
+        <section>
+          <div>
+            <h2>T-shirt - $30,-</h2>
+          </div>
+          <fieldset>
+            <legend>Coustomize your t-shirt!</legend>
+
+            <!-- Color -->
+            <h3>Main color:</h3>
+            <input
+            type="radio"
+            id="green"
+            name="color"
+            value="Green"
+            required
+            />
+            <label for="green">Green</label>
+            <input type="radio" id="red" name="color" value="Red" required />
+            <label for="red">Red</label>
+            <input type="radio" id="blue" name="color" value="Blue" required />
+            <label for="blue">Blue</label>
+            <input type="radio"id="orange" name="color" value="Orange" required />
+            <label for="orange">Orange</label>
+            <input
+              type="radio"
+              id="beige"
+              name="color"
+              value="Beige"
+              required
+            />
+            <label for="beige">Beige</label>
+
+            <h3>Collar color:</h2>
+            <input
+              type="radio"
+              id="black"
+              name="collar"
+              value="Black"
+              required
+            />
+            <label for="black">Black</label>
+            <input
+              type="radio"
+              id="white"
+              name="collar"
+              value="White"
+              required
+            />
+            <label for="white">White</label>
+            <input
+              type="radio"
+              id="dark-green"
+              name="collar"
+              value="Dark-Green"
+              required
+            />
+            <label for="dark-green">Dark Green</label>
+
+            <!-- Text area -->
+            <h3>Text:</h3>
+            <input
+              type="text"
+              placeholder="Customizable text here..."
+              id="text-area"
+              minlength="4"
+              maxlength="30"
+              required
+            />
+
+            <!-- Size -->
+            <h3>Size:</h3>
+            <select id="size" name="sizes">
+              <option value="XS">XS</option>
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+            </select>
+          </fieldset>
+        </section>
+          <input type="submit" value="Create T-shirt!"/>
+      </form>
+  
+      <%- include( './partials/foot' ) %>
