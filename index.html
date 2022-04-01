@@ -182,7 +182,7 @@
               value="Black"
               required
             />
-            <label for="green">Black</label>
+            <label for="black">Black</label>
             <input
               type="radio"
               id="white"
@@ -190,7 +190,7 @@
               value="White"
               required
             />
-            <label for="red">White</label>
+            <label for="white">White</label>
             <input
               type="radio"
               id="dark-green"
@@ -204,8 +204,10 @@
             <h3>Text:</h3>
             <input
               type="text"
-              placeholder="Put customizable text for on the shirt here..."
+              placeholder="Customizable text here..."
               id="text-area"
+              minlength="4"
+              maxlength="30"
               required
             />
 
@@ -219,8 +221,8 @@
               <option value="XL">XL</option>
             </select>
           </fieldset>
-          <input type="submit" value="Create T-shirt!" />
         </section>
+          <input type="submit" value="Create T-shirt!" />
       </form>
     </main>
   </body>
