@@ -1,7 +1,7 @@
 <%- include( './partials/head' ) %>
 
       <h1><mark>Customize YOUR T-shirt!</mark></h1>
-      <form class="customize-section" method="post" action="/">
+      <form class="customize-section" method="post" action="/my-list">
         <section>
           <div>
             <fieldset>
@@ -57,13 +57,13 @@
             value="Green"
             required
             />
-            <label for="green">Green</label>
+            <label for="green" tabindex="0">Green</label>
             <input type="radio" id="red" name="color" value="Red" required />
-            <label for="red">Red</label>
+            <label for="red" tabindex="0">Red</label>
             <input type="radio" id="blue" name="color" value="Blue" required />
-            <label for="blue">Blue</label>
+            <label for="blue" tabindex="0">Blue</label>
             <input type="radio"id="orange" name="color" value="Orange" required />
-            <label for="orange">Orange</label>
+            <label for="orange" tabindex="0">Orange</label>
             <input
               type="radio"
               id="beige"
@@ -71,7 +71,7 @@
               value="Beige"
               required
             />
-            <label for="beige">Beige</label>
+            <label for="beige" tabindex="0">Beige</label>
 
             <h3>Collar color:</h2>
             <input
@@ -81,7 +81,7 @@
               value="Black"
               required
             />
-            <label for="black">Black</label>
+            <label for="black" tabindex="0">Black</label>
             <input
               type="radio"
               id="white"
@@ -89,7 +89,7 @@
               value="White"
               required
             />
-            <label for="white">White</label>
+            <label for="white" tabindex="0">White</label>
             <input
               type="radio"
               id="dark-green"
@@ -97,7 +97,7 @@
               value="Dark-Green"
               required
             />
-            <label for="dark-green">Dark Green</label>
+            <label for="dark-green" tabindex="0">Dark Green</label>
 
             <!-- Text area -->
             <h3>Text:</h3>
@@ -105,6 +105,7 @@
               type="text"
               placeholder="Customizable text here..."
               id="text-area"
+              name="customtext"
               minlength="4"
               maxlength="30"
               required

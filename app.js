@@ -1,10 +1,7 @@
-import bodyParser from "body-parser";
+import bodyParser, { text } from "body-parser";
 import express from 'express';
+import fs from 'fs'
 
-
-const http = require('http');
-const express = require("express");
-const { read } = require('fs');
 const app = express();
 const port = 4000;
 
@@ -20,16 +17,49 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.get('/', (req, res) => {
 
-	fs.readFile('informatie.json', 'utf8', function (err, data) {
-	  if (err) throw err;
-	  let info = JSON.parse(data);
+	// fs.readFile('index.ejs', 'utf8', function (err, data) {
+	//   if (err) throw err;
+	//   let info = JSON.parse(data);
 
-  		res.render('home', {
-  			eerder_opgeslagen_data: info
-  		})
+  		res.render('index'
+      //, {
+  			//eerder_opgeslagen_data: info
+  		//})
+      )
 
 	});
-})
+
+  app.get('/my-list', (req, res) => {
+
+    // fs.readFile('index.ejs', 'utf8', function (err, data) {
+    //   if (err) throw err;
+    //   let info = JSON.parse(data);
+  
+        res.render('my-list'
+        //, {
+          //eerder_opgeslagen_data: info
+        //})
+        )
+  
+    });
+
+    app.get('/shopping-bag', (req, res) => {
+
+      // fs.readFile('index.ejs', 'utf8', function (err, data) {
+      //   if (err) throw err;
+      //   let info = JSON.parse(data);
+    
+          res.render('shopping-bag'
+          //, {
+            //eerder_opgeslagen_data: info
+          //})
+          )
+    
+      });
+    
+  
+  
+
 
 app.get('/user/:id', (req, res) => {
 
@@ -46,22 +76,31 @@ app.get('/user/:id', (req, res) => {
 	})
 })
 
-app.post('/', (req, res) => {
+app.post('/my-list', (req, res) => {
 	console.log(req.body)
 
-	userInput = JSON.stringify(req.body.naam)
+  const shirtInfo = {
+    MainColor: req.body.color,
+    CollarColor: req.body.collar,
+    TextInput: req.body.customtext,
+    ShirtSize: req.body.sizes
+  }
 
-	fs.writeFile('informatie.json', userInput, 'utf8', cb => {
-		console.log('werk dan');
-	});
+	// userInput = JSON.stringify(req.body.naam)
+
+	// fs.writeFile('informatie.json', userInput, 'utf8', cb => {
+	// 	console.log('werk dan');
+	// });
 
 
 	// vertaalDataNaarSpaans(userInput);
 
-	res.render('home', {
-		gebruikersnaam: userInput
+	res.render('my-list'
+  //, {
+		//gebruikersnaam: userInput
+  )
 	})
-})
+
 
 
 app.listen(port, () => {

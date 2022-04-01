@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Customizable T-shirt BT app",
   "main": "app.js",
+  "type": "module",
   "dependencies": {
     "-": "^0.0.1",
     "ejs": "^3.1.6",
