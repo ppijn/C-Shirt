@@ -1,7 +1,8 @@
 import bodyParser from "body-parser";
 import express from 'express';
-import fs from 'fs'
+import fs from 'fs';
 
+// const { v4: uuidv4 } = ('uuid');
 const app = express();
 const port = 4000;
 
@@ -21,29 +22,47 @@ app.get('/', (req, res) => {
 	//   if (err) throw err;
 	//   let info = JSON.parse(data);
 
-  		res.render('index'
-      //, {
-  			//eerder_opgeslagen_data: info
-  		//})
-      )
+  		res.render('index.ejs', {
+  		// eerder_opgeslagen_data: info
+  		})
+});
 
-	});
-
-  app.get('/my-list', (req, res) => {
-
-    // fs.readFile('index.ejs', 'utf8', function (err, data) {
+app.get('/my-list', (req, res) => {
+   
+    // fs.readFile('index.ejs', 'utf8', function (err, data) 
     //   if (err) throw err;
     //   let info = JSON.parse(data);
   
-        res.render('my-list'
-        //, {
-          //eerder_opgeslagen_data: info
-        //})
-        )
-  
-    });
+        res.render('./my-list', {
+          shirtInfo: shirtInfo
+        })
+});
 
-    app.get('/shopping-bag', (req, res) => {
+app.post('/my-list', (req, res) => {
+      console.log(req.body)
+    
+      const shirtInfo = {
+        MainColor: req.body.color,
+        CollarColor: req.body.collar,
+        TextInput: req.body.customtext,
+        ShirtSize: req.body.sizes
+      };
+
+      let data = JSON.stringify(shirtInfo);
+
+      fs.writeFile('shirt.json', data , 'utf8', cb => {
+        console.log('werkt dit?');
+      })
+
+      // shirtInfo.id = uuidv4()
+      console.log('design data', shirtInfo)
+      res.render('my-list', {
+        shirtInfo: shirtInfo
+      }) 
+});
+    
+    
+app.get('/shopping-bag', (req, res) => {
 
       // fs.readFile('index.ejs', 'utf8', function (err, data) {
       //   if (err) throw err;
@@ -54,55 +73,23 @@ app.get('/', (req, res) => {
             //eerder_opgeslagen_data: info
           //})
           )
-    
-      });
-    
-  
-  
+});
+// app.get('/user/:id', (req, res) => {
 
+// 	let input = req.params.id
 
-app.get('/user/:id', (req, res) => {
+// 	if(req.params.id) {
+// 		if(req.params.id === 'robert') {
+// 			input = 'nee doe maar niet';
+// 		}
+// 	}
 
-	let input = req.params.id
-
-	if(req.params.id) {
-		if(req.params.id === 'robert') {
-			input = 'nee doe maar niet';
-		}
-	}
-
-	res.render('home', {
-		persoon: input
-	})
-})
-
-app.post('/my-list', (req, res) => {
-	console.log(req.body)
-
-  const shirtInfo = {
-    MainColor: req.body.color,
-    CollarColor: req.body.collar,
-    TextInput: req.body.customtext,
-    ShirtSize: req.body.sizes
-  }
-
-	// userInput = JSON.stringify(req.body.naam)
-
-	// fs.writeFile('informatie.json', userInput, 'utf8', cb => {
-	// 	console.log('werk dan');
-	// });
-
-
-	// vertaalDataNaarSpaans(userInput);
-
-	res.render('my-list'
-  //, {
-		//gebruikersnaam: userInput
-  )
-	})
-
+// 	res.render('home', {
+// 		persoon: input
+// 	})
+// })
 
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+  console.log(`Example app listening on port ${port}`)
 });
