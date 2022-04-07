@@ -9,6 +9,7 @@ Link to demo:
 
 - [User Story](#user-story)
 - [Features](#features)
+- [My Project](#my-project)
 - [Testing the Project](#testing-the-project)
 - [WireFlow](#wireflow)
 
@@ -31,7 +32,20 @@ For this User Story, there were a few requirements that needed to be included in
 - Be able to create multiple shirts
 - Order page to buy en show the designs
 
-This is a pretty long list and it sounds really challenging. I chose this user story because I like the way it sounded. 
+This is a pretty long list and it sounds really challenging. I chose this user story because I like the way it sounded. I like to challenge myself and step out of my comfort zone. However, having never experienced JavaScript and being very very new to all of this, I decided to change its features and created a core feature based on the user story and my skillset. 
+
+# My Project
+
+I chose to only being able to customize the shirt (No gender, since thats unnecessary and t-shirt are pretty Unisex) and once you created it, it will show on a seperate page with your choices. 
+
+The way I created my project was starting with the HTML version of my page (which is very normal) but I wanted it to both look good and work. Using `CanIuse.com` I went through all the features of the elements I wanted to use. 
+I did the same thing for the css and made the css function for (almost) every browser and device. 
+
+There are some things that dont work on certain browsers like the `required` function. But this isn't very important for the core feature. Being able to customize your t-shirt means that you are able to have complete freedom in your choices. If you dont want text, you shouldnt be forced to chose it. Things like this is what make the user experience better as well. 
+
+I wish I was able to do more for the PE like JavaScript. But since the core feature (and the fact we didnt have many days) I skipped on doing that, making it more Progressive but less interesting. 
+
+<!-- Image of the project -->
 
 
 
