@@ -282,6 +282,7 @@ input[type="submit"] {
   margin-left: 4.5em;
   border: 2px solid black;
   border: none;
+  margin-bottom: 2em;
   font-size: 20px;
   padding: 1em;
   border-radius: 39% 61% 17% 83% / 75% 20% 80% 25%;
@@ -307,6 +308,7 @@ input[type="submit"]:hover {
   padding: 1em;
   margin-bottom: 2em;
   margin: 0 auto;
+  position: relative;
 }
 
 .shirt-area {
@@ -323,6 +325,29 @@ ul {
   font-family: "Verdana", "Geneva", "Tahoma", sans-serif;
 }
 
+@supports (position: relative) {
+  .shirt-list {
+    position: relative
+  }
+}
+
+@supports not (position: absolute) {
+  span {
+    display: none;
+  }
+}
+
+span {
+  position: absolute;
+  top: 80px;
+  margin: 0 auto;
+  left: 124px;
+  color: white;
+  font-size: 14px;
+  width: 70px;
+  text-align: center;
+  font-family: 'pilowlava', sans-serif;
+}
 
 /* Buttons */
 
@@ -335,6 +360,7 @@ ul {
   box-shadow: 2px 2px 10px #bc6c2560;
   margin: 0 auto;
   margin-top: 2em;
+  margin-bottom: 2em;
   border: 2px solid black;
   border: none;
   font-size: 18px;
