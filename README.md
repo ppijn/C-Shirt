@@ -88,4 +88,4 @@ On all of the browsers it worked fine and the core functionality worked for ever
 
 # WireFlow
 
-![WireFlow](...)
+![WireFlow](https://github.com/ppijn/C-Shirt/blob/main/public/img/WireFlow-CShirt.jpg)
