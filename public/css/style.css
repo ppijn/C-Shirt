@@ -409,6 +409,10 @@ span {
     font-size: 1em;
   }
 
+  header nav ul li:first-of-type svg {
+    width: 6em;
+  }
+
   main form section:first-of-type div {
     width: 15em;
     height: 15em;
