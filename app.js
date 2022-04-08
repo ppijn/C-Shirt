@@ -4,7 +4,7 @@ import fs from 'fs';
 
 // const { v4: uuidv4 } = ('uuid');
 const app = express();
-const port = 4000;
+const port = process.env.PORT || 4000;
 
 // Set ejs in als template engine
 app.set("view engine", "ejs");
