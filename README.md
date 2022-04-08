@@ -43,7 +43,16 @@ I did the same thing for the css and made the css function for (almost) every br
 
 There are some things that dont work on certain browsers like the `required` function. But this isn't very important for the core feature. Being able to customize your t-shirt means that you are able to have complete freedom in your choices. If you dont want text, you shouldnt be forced to chose it. Things like this is what make the user experience better as well. 
 
-I wish I was able to do more for the PE like JavaScript. But since the core feature (and the fact we didnt have many days) I skipped on doing that, making it more Progressive but less interesting. 
+For the third layer of the PE (JavaScript), I added so that you can see the shirt change according to the buttons and colors that you have chosen.
+
+```
+inputMain.forEach(element => {
+  element.addEventListener('click', () => {
+    shirtMain.setAttribute('fill', element.value)   
+  })
+})
+```
+
 This is still on my To-Do list. But for now, instead of using JavaScript to display the text on the shirt, I used a span and position relative and absolute. 
 Using this code I test to see if the browser supports it, and if not we just display the span to none.
 
