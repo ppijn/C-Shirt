@@ -3,7 +3,7 @@
 For this course we had to create a demo on the basis of a user story. The goal was to create a project using *Porgressiev Enhancement* and *Feature Detection*. Using these things we want to make it so that our project and our main feature always works no matter what the user has turned off or on what kind of device or browser the user is accessing the project on. 
 
 Link to demo:
-...
+https://c-shirt.herokuapp.com/
 
 # Table of Content
 
